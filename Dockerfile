@@ -6,6 +6,9 @@ RUN apk upgrade --no-cache && apk add --no-cache \
     nginx-mod-http-headers-more \
     openssl
 
+# 清理缓存
+RUN rm -rf /root/.cache && rm -rf /var/cache && rm -rf /tmp/*
+
 RUN sed -i "s/user nginx;/user root;/g" /etc/nginx/nginx.conf
 
 COPY webdav.conf /etc/nginx/http.d/default.conf

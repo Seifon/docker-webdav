@@ -42,6 +42,12 @@ docker run -it --rm \
     ghcr.io/eric-hess/docker-webdav:latest
 ```
 
+## 构建镜像命令：
+```shell
+docker build -t docker-webdav .
+
+```
+
 ## Available env variables
 | Variable name            | Default value | Description                                                                                                                              |
 |--------------------------|---------------|------------------------------------------------------------------------------------------------------------------------------------------|
