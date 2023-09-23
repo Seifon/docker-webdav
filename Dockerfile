@@ -12,6 +12,7 @@ COPY webdav.conf /etc/nginx/http.d/default.conf
 
 COPY entrypoint.sh /opt/webdav/entrypoint.sh
 
+ENV WEBDAV_PORT=80
 ENV WEBDAV_USER=webdav
 ENV WEBDAV_PASSWORD=webdav
 ENV WEBDAV_MAX_UPLOAD_SIZE=0
